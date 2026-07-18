@@ -15,14 +15,17 @@ const app = express();
 const PORT = 5001;
 
 // Middleware
-app.use(
-  cors({
-    origin: ["http://localhost:5173", "https://ai-recipe-genrator-agqa.vercel.app/"],
-    credentials: true,
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-    allowedHeaders: ["Content-Type", "Authorization"],
-  })
-);
+const cors = require('cors');
+
+app.use(cors({
+  origin: [
+    'https://ai-recipe-genrator-agqa.vercel.app', // your production frontend
+    'http://localhost:3000' // for local dev, optional
+  ],
+  credentials: true, // if you're using cookies/auth headers
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+}));
 app.use(bodyParser.json());
 app.use(cookieParser());
 
