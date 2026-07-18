@@ -19,10 +19,9 @@ const cors = require('cors');
 
 app.use(cors({
   origin: [
-    'https://ai-recipe-genrator-agqa.vercel.app', // your production frontend
-    'http://localhost:3000' // for local dev, optional
+    'https://ai-recipe-genrator-agqa.vercel.app'
   ],
-  credentials: true, // if you're using cookies/auth headers
+  credentials: true, 
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
