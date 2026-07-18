@@ -14,9 +14,6 @@ dotenv.config();
 const app = express();
 const PORT = 5001;
 
-// Middleware
-const cors = require('cors');
-
 app.use(cors({
   origin: [
     'https://ai-recipe-genrator-agqa.vercel.app'
