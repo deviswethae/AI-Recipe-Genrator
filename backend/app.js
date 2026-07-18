@@ -17,7 +17,7 @@ const PORT = 5001;
 // Middleware
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://ai-recipe-genrator-ten.vercel.app"],
+    origin: ["http://localhost:5173", "https://ai-recipe-genrator-agqa.vercel.app/"],
     credentials: true,
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     allowedHeaders: ["Content-Type", "Authorization"],
